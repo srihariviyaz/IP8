@@ -1,0 +1,170 @@
+HTML
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <form action="registeration.jsp" >
+            <table>
+                <th><h1>Registration Form</h1></th>
+                <tr>
+                    <td>
+                        <label>Name:</label>
+                    </td>
+                    <td>
+                        <label><input type="text" name="username"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Phone No:</label>
+                    </td>
+                    <td>
+                        <label><input type="number" name="phone"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Email:</label>
+                    </td>
+                    <td>
+                        <label><input type="email" name="email"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Credit Card No:</label>
+                    </td>
+                    <td>
+                        <label><input type="text" name="card"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Password:</label>
+                    </td>
+                    <td>
+                        <label><input type="text" name="password"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label><input type="submit" value="Submit" id ="submit"></label>
+                    </td>
+                </tr>
+            </table>
+            </form>
+        </div>
+    </body>
+    <style>
+        h1{
+            padding: 20px;
+        }
+        div{
+            margin-top: 50px;
+            margin-left: 300px;
+            background-color:burlywood;
+            padding-left: 90px;
+            width: 500px;
+            height: 500px;
+            border-radius: 15px;
+            cell-spacing:10px;
+            padding-top: 100px;
+        }
+        input{
+            border-radius: 5px;
+        }
+        #submit{
+            margin-left: 200px;
+            margin: 30px;
+            width: 180px;
+            height: 40px;
+        }
+    </style>
+</html>
+
+JSP
+<%-- 
+    Document   : registeration
+    Created on : 3 Sep, 2026, 2:11:31 PM
+    Author     : 24uad118
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <% String name = request.getParameter("username");
+           String ph = request.getParameter("phone");
+           String email = request.getParameter("email");
+           String card = request.getParameter("card");
+           String password = request.getParameter("password");
+        %>
+        <div>
+            <table>
+                <th>Person Details</th>
+                <tr>
+                    <td>
+                        Name:
+                    </td>
+                    <td>
+                        <%= name %>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Phone No:
+                    </td>
+                    <td>
+                        <%= ph %>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Email:
+                    </td>
+                    <td>
+                        <%= email %>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Credit Card:
+                    </td>
+                    <td>
+                        <%= password %>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Credit card:
+                    </td>
+                    <td>
+                        <%= card %>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+    <style>
+        div{
+            margin-top: 150px;
+            margin-left: 350px;
+            background-color:burlywood;
+            padding-left: 50px;
+            width: 300px;
+            height: 250px;
+            border-radius: 15px;
+            cellspacing:10px;
+            padding-top: 100px;
+        }
+    </style>
+</html>
